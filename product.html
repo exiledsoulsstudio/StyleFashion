@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore product details at StyleFashion.">
+
+    <title>Product Details | StyleFashion</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="product.css">
+
+    <script type="module" src="product.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="site-header">
+
+        <a class="brand" href="index.html">
+            STYLE<span>FASHION</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">HOME</a>
+            <a href="index.html#shop">COLLECTION</a>
+            <a href="index.html#about">ABOUT</a>
+        </nav>
+
+        <a href="admin.html" class="admin-link">
+            ADMIN ↗
+        </a>
+
+    </header>
+
+
+    <!-- BREADCRUMB -->
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html#shop">Collection</a>
+        <span>/</span>
+        <span id="breadcrumbName">Product</span>
+    </div>
+
+
+    <!-- PRODUCT DETAILS -->
+
+    <main class="product-page">
+
+        <section class="product-details">
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="product-gallery">
+
+                <div class="main-image">
+                    <img
+                        id="productImage"
+                        src=""
+                        alt="Product image"
+                    >
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT INFORMATION -->
+
+            <div class="product-information">
+
+                <p class="product-category" id="productCategory">
+                    COLLECTION
+                </p>
+
+                <h1 id="productName">
+                    Loading product...
+                </h1>
+
+                <div class="rating-section">
+
+                    <span id="productRating">☆☆☆☆☆</span>
+
+                    <span id="reviewCount">
+                        No reviews yet
+                    </span>
+
+                </div>
+
+                <h2 class="product-price" id="productPrice">
+                    ₹0
+                </h2>
+
+                <div class="product-description">
+
+                    <h3>Product Description</h3>
+
+                    <p id="productDescription">
+                        Loading product details...
+                    </p>
+
+                </div>
+
+
+                <!-- SIZE SELECTION -->
+
+                <div class="option-section">
+
+                    <h3>Select Size</h3>
+
+                    <div class="size-options" id="sizeOptions">
+
+                        <button type="button" class="option-btn">S</button>
+                        <button type="button" class="option-btn">M</button>
+                        <button type="button" class="option-btn">L</button>
+                        <button type="button" class="option-btn">XL</button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COLOR SELECTION -->
+
+                <div class="option-section">
+
+                    <h3>Select Colour</h3>
+
+                    <div class="color-options" id="colorOptions">
+
+                        <button type="button" class="option-btn">
+                            Default
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUANTITY -->
+
+                <div class="quantity-section">
+
+                    <h3>Quantity</h3>
+
+                    <div class="quantity-control">
+
+                        <button type="button" id="decreaseQty">−</button>
+
+                        <span id="quantity">1</span>
+
+                        <button type="button" id="increaseQty">+</button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CART BUTTON -->
+<button type="button" id="addToCart" class="cart-btn">
+    ORDER ON WHATSAPP ↗
+</button>
+
+                <p id="productMessage" class="product-message"></p>
+
+                <div class="product-extra">
+
+                    <p>✓ Quality fashion collection</p>
+                    <p>✓ Carefully selected styles</p>
+                    <p>✓ Your style, your story</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CUSTOMER REVIEWS -->
+
+        <section class="reviews-section">
+
+            <p class="eyebrow">CUSTOMER FEEDBACK</p>
+
+            <h2>Ratings & Reviews</h2>
+
+            <div class="review-summary">
+
+                <h3 id="averageRating">0.0</h3>
+
+                <div>
+                    <p id="reviewStars">☆☆☆☆☆</p>
+                    <p id="totalReviews">No reviews yet</p>
+                </div>
+
+            </div>
+
+<div class="review-form">
+
+    <h3>Write a Review</h3>
+
+    <label for="customerName">Your Name</label>
+    <input
+        type="text"
+        id="customerName"
+        placeholder="Enter your name"
+        maxlength="50"
+    >
+
+    <label>Your Rating</label>
+
+    <div class="star-input" id="starInput">
+        <button type="button" data-rating="1">☆</button>
+        <button type="button" data-rating="2">☆</button>
+        <button type="button" data-rating="3">☆</button>
+        <button type="button" data-rating="4">☆</button>
+        <button type="button" data-rating="5">☆</button>
+    </div>
+
+    <label for="customerReview">Your Review</label>
+
+    <textarea
+        id="customerReview"
+        placeholder="Share your experience..."
+        maxlength="500"
+    ></textarea>
+
+    <button type="button" id="submitReview">
+        SUBMIT REVIEW
+    </button>
+
+    <p id="reviewMessage"></p>
+
+</div>
+
+<div id="reviewsList" class="reviews-list">
+    <p>No reviews available yet.</p>
+</div>
+
+        </section>
+
+
+        <!-- RELATED PRODUCTS -->
+
+        <section class="related-section">
+
+            <p class="eyebrow">MORE TO EXPLORE</p>
+
+            <h2>You May Also Like</h2>
+
+            <div id="relatedProducts" class="related-grid"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <a class="brand" href="index.html">
+                STYLE<span>FASHION</span>
+            </a>
+
+            <p>Your style. Your story.</p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="index.html#shop">Collection</a>
+            <a href="index.html#about">About</a>
+
+        </div>
+
+        <small>
+            © <span id="year"></span> StyleFashion.
+            All rights reserved.
+        </small>
+
+    </footer>
+
+</body>
+</html>

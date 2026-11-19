@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover your favourite fashion styles at StyleFashion.">
+
+    <title>StyleFashion | Find Your Style</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="app.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="site-header">
+
+        <a class="brand" href="#home">
+            STYLE<span>FASHION</span>
+        </a>
+
+        <a class="admin-link" href="admin.html">
+            ADMIN ↗
+        </a>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-copy">
+
+                <p class="eyebrow">
+                    THE ART OF EVERYDAY STYLE
+                </p>
+
+                <h1>
+                    Find Your<br>
+                    <em>Own Elegance.</em>
+                </h1>
+
+                <p>
+                    Fashion is more than what you wear.
+                    It's a reflection of who you are.
+                    Discover pieces that feel like you.
+                </p>
+
+                <a href="#shop" class="primary-btn">
+                    EXPLORE COLLECTION ↗
+                </a>
+
+            </div>
+
+            <div class="hero-art">
+
+                <div class="hero-shape shape-one"></div>
+
+                <div class="hero-shape shape-two"></div>
+
+                <div class="hero-note">
+                    STYLE IS<br>
+                    PERSONAL.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COLLECTION -->
+
+        <section class="shop-section" id="shop">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">
+                        CURATED FOR YOU
+                    </p>
+
+                    <h2>Explore the Collection.</h2>
+                </div>
+
+                <label class="search-wrap">
+
+                    <input
+                        id="searchInput"
+                        type="search"
+                        placeholder="Search your style..."
+                        aria-label="Search products"
+                    >
+
+                </label>
+
+            </div>
+
+
+            <!-- CATEGORIES -->
+
+            <div class="filter-row" id="categoryFilters">
+
+                <button
+                    class="filter-btn active"
+                    data-category="all"
+                >
+                    All
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+
+            <p class="status-message" id="shopStatus">
+                Loading collection...
+            </p>
+
+            <div class="product-grid" id="productGrid"></div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="about-section" id="about">
+
+            <p class="eyebrow">
+                OUR PHILOSOPHY
+            </p>
+
+            <h2>
+                More Than Fashion.<br>
+                <em>A Way of Expression.</em>
+            </h2>
+
+            <p>
+                StyleFashion is a space for discovering
+                beautiful everyday pieces. We believe
+                personal style has no rules. Find what
+                makes you feel confident and make it yours.
+            </p>
+
+            <a href="#shop" class="about-link">
+                DISCOVER YOUR STYLE ↗
+            </a>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div class="footer-brand">
+                <a class="brand" href="#home">
+                    STYLE<span>FASHION</span>
+                </a>
+
+                <p>
+                    Your style. Your story.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#shop">Collection</a>
+                <a href="#about">About</a>
+
+            </div>
+
+            <small>
+                © <span id="year"></span> StyleFashion.
+                All rights reserved.
+            </small>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>

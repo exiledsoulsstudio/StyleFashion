@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StyleFashion | Admin Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="admin.css">
+
+    <script type="module" src="admin.js"></script>
+</head>
+
+<body>
+
+<main class="admin-shell">
+
+    <!-- LOGIN -->
+
+    <section class="login-panel" id="loginPanel">
+
+        <a class="back-link" href="index.html">← Back to Store</a>
+
+        <p class="eyebrow">STYLEFASHION ADMIN</p>
+
+        <h1>Welcome Back.</h1>
+
+        <p class="login-description">
+            Manage your store, products and collection.
+        </p>
+
+        <form id="loginForm">
+
+            <label>
+                Email
+                <input type="email" id="email"
+                    placeholder="Enter your email" required>
+            </label>
+
+            <label>
+                Password
+                <input type="password" id="password"
+                    placeholder="Enter your password" required>
+            </label>
+
+            <button class="btn login-btn" type="submit">
+                Sign In
+            </button>
+
+            <p id="loginMessage" class="message"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- DASHBOARD -->
+
+    <section class="dashboard-panel hidden" id="dashboardPanel">
+
+        <header class="admin-header">
+
+            <div>
+                <p class="eyebrow">STYLEFASHION</p>
+                <h1>Dashboard</h1>
+                <p class="subtitle">Manage your fashion store.</p>
+            </div>
+
+            <div class="header-actions">
+                <a class="view-store" href="index.html">
+                    View Store ↗
+                </a>
+
+                <button class="logout-btn" id="logoutBtn">
+                    Logout
+                </button>
+            </div>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Products</p>
+                <h2 id="totalProducts">0</h2>
+                <span>Your store collection</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Store Status</p>
+                <h2 class="active-status">Active</h2>
+                <span>Your store is running</span>
+            </div>
+
+        </section>
+
+
+        <!-- ADD PRODUCT -->
+
+        <section class="form-card">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">INVENTORY MANAGEMENT</p>
+                    <h2 id="formHeading">Add New Product</h2>
+                </div>
+            </div>
+
+            <form id="productForm" class="product-form">
+
+                <label>
+                    Product Name
+                    <input type="text" id="productName"
+                        placeholder="e.g. Elegant Kurti" required>
+                </label>
+
+                <label>
+                    Product Price (₹)
+                    <input type="number" id="productPrice"
+                        placeholder="e.g. 799" min="0" required>
+                </label>
+
+                <label>
+                    Category
+                    <input type="text" id="productCategory"
+                        placeholder="e.g. Women's Wear" required>
+                </label>
+
+                <label>
+                    Product Image URL
+                    <input type="url" id="productImage"
+                        placeholder="Paste image URL">
+                </label>
+
+                <div class="form-actions">
+                    <button class="btn" type="submit" id="saveProductBtn">
+                        Add Product
+                    </button>
+
+                    <button type="button"
+                        id="cancelEditBtn"
+                        class="cancel-btn hidden">
+                        Cancel Edit
+                    </button>
+                </div>
+
+                <p id="productMessage" class="message"></p>
+
+            </form>
+
+        </section>
+
+
+      <!-- PRODUCT LIST -->
+
+<section class="catalogue">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">YOUR COLLECTION</p>
+            <h2>All Products</h2>
+        </div>
+    </div>
+
+    <div id="productList">
+        Loading products...
+    </div>
+
+</section>
+
+
+<!-- CUSTOMER REVIEWS -->
+
+<section class="catalogue">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">CUSTOMER FEEDBACK</p>
+            <h2>Customer Reviews</h2>
+        </div>
+    </div>
+
+    <div id="adminReviews">
+        Loading reviews...
+    </div>
+
+    <p id="reviewAdminMessage" class="message"></p>
+
+</section>
+
+</section>
+</main>
+
+</body>
+</html>
